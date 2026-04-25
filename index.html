@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio | Djeneba Diallo - Animatrice BAFA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="terminal-init">
+    <pre id="terminal-text"></pre>
+  </div>
+
+  <div id="main-content" class="hidden">
+    
+    <section id="avatar-section">
+      <button id="cv-button" onclick="downloadCV()">📄 Télécharger CV BAFA</button>
+      <div class="avatar-container">
+        <img src="docs/images/avatar_.png" alt="Djeneba Diallo Avatar" width="180" height="270">
+        <div class="avatar-text">
+          <h1>Djeneba Diallo</h1>
+          <p>
+            Animatrice titulaire du BAFA complet et du PSC1. Spécialisée dans l'accueil d'enfants en situation de handicap, j'encadre des groupes de 6 à 17 ans avec dynamisme et sécurité.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <nav>
+      <button onclick="showSection('intro')">> À Propos</button>
+      <button onclick="showSection('projets')">> Expériences Animation</button>
+      <button onclick="showSection('skills')">> Compétences</button>
+      <button onclick="showSection('contact')">> Contact</button>
+    </nav>
+
+    <section id="intro">
+      <h2>À propos</h2>
+      <h3>📚 Formation & Certifications</h3>
+      <ul>
+        <li>BAFA Complet - Approfondissement : Accueillir des enfants en situation de handicap (Cemea).</li>
+        <li>Certificat PSC1 (Prévention et Secours Civiques de Niveau 1) obtenu avec la Croix-Rouge Française.</li>
+        <li>Bachelor Universitaire de Technologie en cours à l'IUT de Montreuil.</li>
+      </ul>
+    </section>
+
+    <section id="projets" class="hidden">
+      <h2>Mes Expériences en Animation</h2>
+      <div class="project-row">
+        
+        <div class="project">
+          <h3>Animatrice en Séjour (UCPA)</h3>
+          <p><strong>Public :</strong> 11-17 ans / 14-17 ans.</p>
+          <p>Encadrement de séjours "Multisports" à Séné. Gestion de la vie quotidienne, surveillance et respect des consignes de sécurité.</p>
+        </div>
+
+        <div class="project">
+          <h3>Animatrice Scientifique (Les Petits Débrouillards)</h3>
+          <p><strong>Public :</strong> Enfants et adolescents.</p>
+          <p>Sensibilisation aux enjeux climatiques, sociaux et numériques par des expériences ludiques.</p>
+        </div>
+
+        <div class="project">
+          <h3>Animatrice Diplômée (Les Ateliers Amasco)</h3>
+          <p><strong>Public :</strong> 6-12 ans.</p>
+          <p>Organisation d'ateliers éducatifs et récréatifs dans un environnement sûr et stimulant.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills" class="hidden">
+      <h2>Compétences & Qualités</h2>
+      <div style="padding-left: 20px;">
+        <ul>
+          <li>✅ <strong>Sécurité :</strong> Connaissance des réglementations et encadrement des mineurs.</li>
+          <li>🤝 <strong>Adaptabilité :</strong> Capacité d'adaptation et créativité en toute situation.</li>
+          <li>⏳ <strong>Savoir-être :</strong> Ponctuelle, sérieuse et patiente.</li>
+          <li>🗣️ <strong>Langues :</strong> Français (Maternelle) et Anglais (Niveau B2).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Contact</h2>
+      <p>Email : <a href="mailto:djenebadiallo06@icloud.com">djenebadiallo06@icloud.com</a></p>
+      <p>Téléphone : 07 67 41 91 70</p>
+      <p>Localisation : Aulnay-Sous-Bois</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Djeneba Diallo | Animatrice BAFA</p>
+    </footer>
+  </div>
+
+  <script>
+    // Animation du terminal au chargement
+    const lines = [
+      "Vérification du matériel pédagogique...",
+      "Préparation des thèmes de la semaine...",
+      "Inventaire trousse de secours (PSC1)... OK",
+      "Module handicap chargé.",
+      "Système d'animation prêt."
+    ];
+
+    let lineIdx = 0;
+    function typeTerminal() {
+      const terminal = document.getElementById("terminal-text");
+      if (lineIdx < lines.length) {
+        const div = document.createElement("div");
+        div.textContent = lines[lineIdx];
+        terminal.appendChild(div);
+        lineIdx++;
+        setTimeout(typeTerminal, 600);
+      } else {
+        setTimeout(() => {
+          document.getElementById("terminal-init").classList.add("hidden");
+          document.getElementById("main-content").classList.remove("hidden");
+        }, 1000);
+      }
+    }
+
+    // Lancer le terminal dès le chargement
+    window.onload = typeTerminal;
+
+    // Navigation entre sections
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(s => {
+        if (s.id !== "avatar-section") s.classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function downloadCV() {
+      const link = document.createElement("a");
+      link.href = "docs/CV_BAFA.pdf"; // Assure-toi que le nom du fichier correspond
+      link.download = "CV_Djeneba_Diallo_BAFA.pdf";
+      link.click();
+    }
+  </script>
+
+</body>
+</html>

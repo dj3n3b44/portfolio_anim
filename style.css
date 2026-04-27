@@ -23,7 +23,7 @@ body {
 
 /* 2. Écran Terminal - Adapté Mobile */
 #terminal-init {
-    background-color: #ff9f43; 
+    background-color: #e68dbf; 
     color: #fff;
     font-family: 'Courier New', monospace;
     height: 100vh;
@@ -96,7 +96,7 @@ body {
     font-size: 2.8rem;
     font-weight: 600;
     color: #ee5253; 
-    text-shadow: 1px 1px 0 #fff, 3px 3px 0 #ff9f43;
+    text-shadow: 1px 1px 0 #fff, 3px 3px 0 #e68dbf;
     margin-bottom: 10px;
 }
 
@@ -118,7 +118,7 @@ nav {
 nav button {
     background-color: #fff;
     color: #333;
-    border: 3px solid #ff9f43;
+    border: 3px solid #e68dbf;
     padding: 10px 22px;
     font-size: 1rem;
     font-weight: 600;
@@ -126,11 +126,11 @@ nav button {
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 0 #ffc048;
+    box-shadow: 0 4px 0 #da5e6c;
 }
 
 nav button:hover {
-    background-color: #ff9f43;
+    background-color: #e68dbf;
     color: #fff;
     transform: scale(1.05);
 }
@@ -174,8 +174,8 @@ section {
     background: #fff;
     padding: 30px;
     border-radius: 25px;
-    border: 4px solid #ffc048;
-    box-shadow: 0 8px 0 #ff9f43;
+    border: 4px solid #da5e6c;
+    box-shadow: 0 8px 0 #e68dbf;
     margin-bottom: 40px;
     position: relative;
 }
@@ -336,7 +336,7 @@ footer {
     padding: 25px;
     color: #fff;
     font-weight: 600;
-    background-color: #ff9f43;
+    background-color: #e68dbf;
     margin-top: 40px;
     border-radius: 20px 20px 0 0;
 }

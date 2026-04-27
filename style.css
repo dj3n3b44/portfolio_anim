@@ -15,30 +15,41 @@ body {
     overflow-x: hidden;
 }
 
-/* 2. Écran Terminal */
+/* 2. Écran Terminal - Adapté Mobile */
 #terminal-init {
     background-color: #ff9f43; 
     color: #fff;
     font-family: 'Courier New', monospace;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    padding: 10px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 9999;
 }
 
 #terminal-init pre {
-    border: 3px solid #fff;
-    padding: 20px;
+    border: 2px solid #fff;
+    padding: 15px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.85rem; /* Réduit pour mobile */
+    max-width: 95%;
+    white-space: pre-wrap; /* Force le retour à la ligne */
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+@media (min-width: 769px) {
+    #terminal-init pre {
+        font-size: 1.2rem;
+        padding: 25px;
+        max-width: 800px;
+    }
 }
 
 .hidden {
@@ -197,7 +208,7 @@ section h2 {
 .exp-sene { border-left-color: #0984e3; }
 .exp-ourcq { border-left-color: #5f27cd; }
 
-/* 6. Badges Corrigés (Verticalité) */
+/* 6. Badges */
 .badge-container {
     display: flex;
     flex-wrap: wrap;
@@ -259,7 +270,7 @@ section h2 {
 .tag-orange { background-color: #ff9f43; }
 .tag-blue { background-color: #0984e3; }
 
-/* 8. Skills et Polaroids Corrigés */
+/* 8. Skills et Polaroids */
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -308,7 +319,7 @@ section h2 {
     font-weight: 600;
 }
 
-/* 9. Barre de Progression Corrigée */
+/* 9. Barre de Progression - Adaptée Mobile */
 @keyframes progressLoad {
     0%   { content: " [          ] 0%"; }
     10%  { content: " [#         ] 10%"; }
@@ -327,8 +338,17 @@ section h2 {
     content: " [          ]"; 
     color: #1dd1a1;
     font-weight: bold;
-    display: inline-block;
+    display: block; /* Force le passage à la ligne sur mobile */
+    margin-top: 5px;
     animation: progressLoad 2s steps(1) forwards;
+}
+
+@media (min-width: 769px) {
+    #terminal-text div.final-line::after {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 10px;
+    }
 }
 
 /* 10. Animations et Footer */
@@ -350,6 +370,8 @@ footer {
 
 @media (max-width: 768px) {
     .skills-grid { grid-template-columns: 1fr; }
-    #avatar-section h1 { font-size: 2.2rem; }
+    .avatar-container { flex-direction: column; text-align: center; }
+    #avatar-section img { margin-right: 0; margin-bottom: 15px; }
+    #avatar-section h1 { font-size: 2rem; }
     nav button { width: 100%; }
 }

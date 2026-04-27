@@ -1,6 +1,9 @@
 /* style.css - DA : COLO CHIC & SOLEIL */
 
-/* 1. Reset et Fond de page */
+/* 1. Importation d'une police moderne et lisible */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+/* Reset et Fond de page */
 * {
     margin: 0;
     padding: 0;
@@ -9,39 +12,13 @@
 }
 
 body {
-    font-family: 'Fredoka One', 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Fredoka', sans-serif; /* Nouvelle police plus nette */
     background-color: #f0f7ff; 
     color: #333;
     overflow-x: hidden;
-    /* --- Amélioration de la netteté du texte --- */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-}
-
-/* Réduction de la taille et de l'épaisseur sur mobile */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* Un peu plus petit pour éviter l'effet "gros pâté" */
-    }
-    
-    #avatar-section h1 {
-        font-size: 1.8rem !important; /* Titre plus fin */
-        letter-spacing: 1px;
-    }
-
-    #avatar-section p {
-        font-size: 0.95rem;
-        line-height: 1.4;
-    }
-
-    section h2 {
-        font-size: 1.5rem !important;
-    }
-    
-    .project h3 {
-        font-size: 1.1rem;
-    }
 }
 
 /* 2. Écran Terminal - Adapté Mobile */
@@ -66,16 +43,16 @@ body {
     padding: 15px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.2);
-    font-size: 0.85rem; /* Réduit pour mobile */
+    font-size: 0.85rem;
     max-width: 95%;
-    white-space: pre-wrap; /* Force le retour à la ligne */
+    white-space: pre-wrap;
     word-break: break-word;
     line-height: 1.4;
 }
 
 @media (min-width: 769px) {
     #terminal-init pre {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding: 25px;
         max-width: 800px;
     }
@@ -111,28 +88,29 @@ body {
 #avatar-section img {
     border-radius: 50%;
     margin-right: 20px;
-    width: 180px;
+    width: 160px;
     height: auto;
 }
 
 #avatar-section h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    font-weight: 600;
     color: #ee5253; 
-    text-shadow: 2px 2px 0 #fff, 4px 4px 0 #ff9f43;
+    text-shadow: 1px 1px 0 #fff, 3px 3px 0 #ff9f43;
     margin-bottom: 10px;
 }
 
 #avatar-section p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: #57606f;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 /* 4. Navigation et Boutons */
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
@@ -140,14 +118,15 @@ nav {
 nav button {
     background-color: #fff;
     color: #333;
-    border: 4px solid #ff9f43;
-    padding: 12px 25px;
-    font-size: 1.1rem;
+    border: 3px solid #ff9f43;
+    padding: 10px 22px;
+    font-size: 1rem;
+    font-weight: 600;
     border-radius: 30px;
     font-family: inherit;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 0 #ffc048;
+    box-shadow: 0 4px 0 #ffc048;
 }
 
 nav button:hover {
@@ -157,26 +136,27 @@ nav button:hover {
 }
 
 nav button.active {
-    transform: translateY(4px);
+    transform: translateY(3px);
     box-shadow: none;
-    filter: brightness(0.9);
+    filter: brightness(0.95);
 }
 
-nav button:nth-child(1) { border-color: #1dd1a1; box-shadow: 0 6px 0 #10ac84; }
-nav button:nth-child(2) { border-color: #ff6b6b; box-shadow: 0 6px 0 #ee5253; }
-nav button:nth-child(3) { border-color: #54a0ff; box-shadow: 0 6px 0 #2e86de; }
-nav button:nth-child(4) { border-color: #5f27cd; box-shadow: 0 6px 0 #341f97; }
+nav button:nth-child(1) { border-color: #1dd1a1; box-shadow: 0 4px 0 #10ac84; }
+nav button:nth-child(2) { border-color: #ff6b6b; box-shadow: 0 4px 0 #ee5253; }
+nav button:nth-child(3) { border-color: #54a0ff; box-shadow: 0 4px 0 #2e86de; }
+nav button:nth-child(4) { border-color: #5f27cd; box-shadow: 0 4px 0 #341f97; }
 
 #cv-button {
     background-color: #2bcbba; 
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
     border-radius: 50px;
     font-family: inherit;
     cursor: pointer;
-    box-shadow: 0 8px 0 #0fb9b1;
+    box-shadow: 0 6px 0 #0fb9b1;
     transition: all 0.2s ease;
     margin-bottom: 20px;
     display: flex;
@@ -185,63 +165,59 @@ nav button:nth-child(4) { border-color: #5f27cd; box-shadow: 0 6px 0 #341f97; }
 }
 
 #cv-button:hover {
-    transform: translateY(3px);
-    box-shadow: 0 5px 0 #0fb9b1;
+    transform: translateY(2px);
+    box-shadow: 0 4px 0 #0fb9b1;
 }
 
 /* 5. Sections et Cartes */
 section {
     background: #fff;
     padding: 30px;
-    border-radius: 30px;
-    border: 5px solid #ffc048;
-    box-shadow: 0 10px 0 #ff9f43;
+    border-radius: 25px;
+    border: 4px solid #ffc048;
+    box-shadow: 0 8px 0 #ff9f43;
     margin-bottom: 40px;
     position: relative;
 }
 
 section h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #ee5253;
     margin-bottom: 25px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .project-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .project {
-    background: #f1f2f6;
+    background: #f8faff;
     padding: 20px;
     border-radius: 20px;
-    border: 3px solid #54a0ff; 
+    border: 2px solid #54a0ff; 
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
 }
 
 .project:hover {
-    transform: scale(1.03) rotate(1deg);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: scale(1.02) rotate(0.5deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     z-index: 5;
     border-color: #ee5253; 
 }
 
-.formation-generale { border-left: 8px solid #1dd1a1; }
-.formation-pratique { border-left: 8px solid #ff6b6b; }
-.formation-approfondissement { border-left: 8px solid #54a0ff; }
-.exp-bois-le-roi { border-left-color: #ff9f43; }
-.exp-sene { border-left-color: #0984e3; }
-.exp-ourcq { border-left-color: #5f27cd; }
+.project h3 { font-weight: 600; font-size: 1.2rem; margin-bottom: 8px; color: #2e86de; }
 
 /* 6. Badges */
 .badge-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -249,104 +225,71 @@ section h2 {
     display: flex;
     align-items: center;
     padding: 12px 20px;
-    border-radius: 20px;
+    border-radius: 18px;
     color: white;
-    box-shadow: 0 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 4px 0 rgba(0,0,0,0.1);
     min-width: 250px;
 }
 
-.badge-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+.badge-text { display: flex; flex-direction: column; align-items: flex-start; }
+.badge-text strong { font-size: 1rem; font-weight: 600; display: block; }
+.badge-text span { font-size: 0.85rem; opacity: 0.9; display: block; }
+.badge-icon { font-size: 1.6rem; margin-right: 12px; }
 
-.badge-text strong {
-    font-size: 1rem;
-    display: block;
-}
-
-.badge-text span {
-    font-size: 0.8rem;
-    opacity: 0.9;
-    display: block;
-}
-
-.badge-icon { font-size: 1.8rem; margin-right: 15px; }
-.badge-red { background-color: #ee5253; border-bottom: 4px solid #d43f3f; }
-.badge-blue { background-color: #54a0ff; border-bottom: 4px solid #2e86de; }
-.badge-purple { background-color: #5f27cd; border-bottom: 4px solid #341f97; }
+.badge-red { background-color: #ee5253; border-bottom: 3px solid #d43f3f; }
+.badge-blue { background-color: #54a0ff; border-bottom: 3px solid #2e86de; }
+.badge-purple { background-color: #5f27cd; border-bottom: 3px solid #341f97; }
 
 /* 7. Tags */
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-}
-
+.tag-container { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    padding: 4px 12px;
-    border-radius: 12px;
+    padding: 4px 10px;
+    border-radius: 8px;
     color: white;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
-
 .tag-pink { background-color: #fd79a8; }
 .tag-green { background-color: #00b894; }
 .tag-orange { background-color: #ff9f43; }
 .tag-blue { background-color: #0984e3; }
 
 /* 8. Skills et Polaroids */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.polaroid-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.polaroid-gallery { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
 
 .polaroid {
     background: white;
-    padding: 10px 10px 25px 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    padding: 8px 8px 22px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     border: 1px solid #eee;
     transition: all 0.3s ease !important;
-    width: 140px;
+    width: 130px;
     z-index: 1;
 }
 
-.polaroid:nth-child(1) { transform: rotate(-5deg); }
-.polaroid:nth-child(2) { transform: rotate(3deg); }
+.polaroid:nth-child(1) { transform: rotate(-4deg); }
+.polaroid:nth-child(2) { transform: rotate(2deg); }
 .polaroid:nth-child(3) { transform: rotate(-2deg); }
 
 .polaroid:hover {
     transform: scale(1.1) rotate(0deg) !important;
     z-index: 10 !important;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15) !important;
 }
 
 .polaroid-photo {
     background: #f8f9fa;
-    height: 100px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
-.polaroid-caption {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 600;
-}
+.polaroid-caption { text-align: center; margin-top: 8px; font-weight: 600; font-size: 0.85rem; color: #555; }
 
 /* 9. Barre de Progression - Adaptée Mobile */
 @keyframes progressLoad {
@@ -367,7 +310,7 @@ section h2 {
     content: " [          ]"; 
     color: #1dd1a1;
     font-weight: bold;
-    display: block; /* Force le passage à la ligne sur mobile */
+    display: block;
     margin-top: 5px;
     animation: progressLoad 2s steps(1) forwards;
 }
@@ -381,26 +324,32 @@ section h2 {
 }
 
 /* 10. Animations et Footer */
-section:not(.hidden) { animation: fadeInSlide 0.6s ease-out; }
+section:not(.hidden) { animation: fadeInSlide 0.5s ease-out; }
 
 @keyframes fadeInSlide {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     color: #fff;
+    font-weight: 600;
     background-color: #ff9f43;
     margin-top: 40px;
     border-radius: 20px 20px 0 0;
 }
 
+/* 11. Ajustements Mobile */
 @media (max-width: 768px) {
+    body { font-size: 15px; }
     .skills-grid { grid-template-columns: 1fr; }
     .avatar-container { flex-direction: column; text-align: center; }
-    #avatar-section img { margin-right: 0; margin-bottom: 15px; }
-    #avatar-section h1 { font-size: 2rem; }
-    nav button { width: 100%; }
+    #avatar-section img { margin-right: 0; margin-bottom: 15px; width: 140px; }
+    #avatar-section h1 { font-size: 2.1rem; }
+    nav { gap: 8px; }
+    nav button { width: 100%; padding: 12px; font-size: 0.95rem; }
+    section { padding: 20px; border-radius: 20px; margin-bottom: 30px; }
+    section h2 { font-size: 1.5rem; }
 }

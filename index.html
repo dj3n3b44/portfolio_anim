@@ -17,7 +17,7 @@
     <section id="avatar-section">
       <button id="cv-button" onclick="downloadCV()">📄 Télécharger CV BAFA</button>
       <div class="avatar-container">
-        <img src="docs/images/avatar_.png" alt="Djeneba Diallo Avatar" width="180" height="270">
+        <img src="docs/avatar.png" alt="Djeneba Diallo Avatar" width="180" height="270">
         <div class="avatar-text">
           <h1>Djeneba Diallo</h1>
           <p>
@@ -30,54 +30,140 @@
     <nav>
       <button onclick="showSection('intro')">> À Propos</button>
       <button onclick="showSection('projets')">> Expériences Animation</button>
-      <button onclick="showSection('skills')">> Compétences</button>
+      <button onclick="showSection('skills')">> Compétences & Loisirs</button>
       <button onclick="showSection('contact')">> Contact</button>
     </nav>
 
     <section id="intro">
-      <h2>À propos</h2>
-      <h3>📚 Formation & Certifications</h3>
-      <ul>
-        <li>BAFA Complet - Approfondissement : Accueillir des enfants en situation de handicap (Cemea).</li>
-        <li>Certificat PSC1 (Prévention et Secours Civiques de Niveau 1) obtenu avec la Croix-Rouge Française.</li>
-        <li>Bachelor Universitaire de Technologie en cours à l'IUT de Montreuil.</li>
-      </ul>
+      <h2>Ma Formation BAFA</h2>
+      <div class="project-row">
+        <div class="project formation-generale">
+          <h3>1. Session Générale</h3>
+          <p><strong>Organisme :</strong> Ifac, Saint-Ouen</p>
+          <p><strong>Date :</strong> Octobre 2023</p>
+          <p>Acquisition des bases théoriques de l'animation, de la connaissance de l'enfant et des réglementations.</p>
+        </div>
+
+        <div class="project formation-pratique">
+          <h3>2. Stage Pratique</h3>
+          <p><strong>Lieu :</strong> École Ourcq B (Paris 19e)</p>
+          <p>Mise en pratique directe avec des groupes de 3 à 5 ans et de 6 à 11 ans. Validation des aptitudes d'encadrement et de sécurité.</p>
+        </div>
+
+        <div class="project formation-approfondissement">
+          <h3>3. Approfondissement</h3>
+          <p><strong>Thème :</strong> Handicap</p>
+          <p><strong>Organisme :</strong> Cemea, Aubervilliers</p>
+          <p>Spécialisation dans l'accueil et l'inclusion des enfants en situation de handicap en milieu ordinaire.</p>
+        </div>
+      </div>
+
+      <div class="certifications-block">
+        <h3>Certifications & Informations</h3>
+        <div class="badge-container">
+          <div class="badge badge-red">
+            <span class="badge-icon">🚑</span>
+            <div class="badge-text">
+              <strong>PSC1 Secourisme</strong>
+              <span>Croix-Rouge (Mai 2025)</span>
+            </div>
+          </div>
+
+          <div class="badge badge-blue">
+            <span class="badge-icon">🚗</span>
+            <div class="badge-text">
+              <strong>Permis B</strong>
+              <span>Depuis bientôt 1 an (juin 2025)</span>
+            </div>
+          </div>
+
+          <div class="badge badge-purple">
+            <span class="badge-icon">🎓</span>
+            <div class="badge-text">
+              <strong>BUT Informatique</strong>
+              <span>IUT de Montreuil (2e année en cours)</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projets" class="hidden">
       <h2>Mes Expériences en Animation</h2>
+      
       <div class="project-row">
-        
-        <div class="project">
-          <h3>Animatrice en Séjour (UCPA)</h3>
-          <p><strong>Public :</strong> 11-17 ans / 14-17 ans.</p>
-          <p>Encadrement de séjours "Multisports" à Séné. Gestion de la vie quotidienne, surveillance et respect des consignes de sécurité.</p>
+        <div class="project exp-bois-le-roi">
+          <div class="tag-container">
+            <span class="tag tag-green">6-11 ans</span>
+          </div>
+          <h3>UCPA Odyssée (Bois-Le-Roi)</h3>
+          <p>Encadrement et animation de séjours. Mise en place d'activités ludiques et gestion de la vie quotidienne.</p>
+        </div>
+
+        <div class="project exp-sene">
+          <div class="tag-container">
+            <span class="tag tag-orange">11-13 ans</span>
+            <span class="tag tag-blue">14-17 ans</span>
+          </div>
+          <h3>UCPA Odyssée (Séné)</h3>
+          <p>Animation de séjours "Multisports". Surveillance active et respect des consignes de sécurité.</p>
         </div>
 
         <div class="project">
-          <h3>Animatrice Scientifique (Les Petits Débrouillards)</h3>
-          <p><strong>Public :</strong> Enfants et adolescents.</p>
-          <p>Sensibilisation aux enjeux climatiques, sociaux et numériques par des expériences ludiques.</p>
+          <div class="tag-container">
+            <span class="tag tag-green">6-11 ans</span>
+            <span class="tag tag-blue">12-17 ans</span>
+          </div>
+          <h3>Les Petits Débrouillards</h3>
+          <p>Animation d'ateliers scientifiques et sensibilisation aux enjeux climatiques.</p>
         </div>
 
         <div class="project">
-          <h3>Animatrice Diplômée (Les Ateliers Amasco)</h3>
-          <p><strong>Public :</strong> 6-12 ans.</p>
-          <p>Organisation d'ateliers éducatifs et récréatifs dans un environnement sûr et stimulant.</p>
+          <div class="tag-container">
+            <span class="tag tag-green">6-12 ans</span>
+          </div>
+          <h3>Les Ateliers Amasco</h3>
+          <p>Organisation d'ateliers éducatifs et récréatifs dans un environnement bienveillant.</p>
         </div>
 
+        <div class="project exp-ourcq">
+          <div class="tag-container">
+            <span class="tag tag-pink">3-5 ans</span>
+            <span class="tag tag-green">6-11 ans</span>
+          </div>
+          <h3>Animatrice - École de l'Ourcq B (Paris 19e)</h3>
+          <p>Encadrement des enfants sur les temps périscolaires et organisation d'activités adaptées.</p>
+        </div>
       </div>
     </section>
 
     <section id="skills" class="hidden">
-      <h2>Compétences & Qualités</h2>
-      <div style="padding-left: 20px;">
-        <ul>
-          <li>✅ <strong>Sécurité :</strong> Connaissance des réglementations et encadrement des mineurs.</li>
-          <li>🤝 <strong>Adaptabilité :</strong> Capacité d'adaptation et créativité en toute situation.</li>
-          <li>⏳ <strong>Savoir-être :</strong> Ponctuelle, sérieuse et patiente.</li>
-          <li>🗣️ <strong>Langues :</strong> Français (Maternelle) et Anglais (Niveau B2).</li>
-        </ul>
+      <h2>Compétences & Centres d'Intérêt</h2>
+      <div class="skills-grid">
+        <div class="skills-list">
+          <h3>Savoir-faire Animation</h3>
+          <ul>
+            <li>✅ Gestion de groupe et vie quotidienne</li>
+            <li>✅ Animation de grands jeux et veillées</li>
+            <li>✅ Inclusion d'enfants en situation de handicap</li>
+            <li>✅ Montage vidéo & Photographie</li>
+          </ul>
+        </div>
+
+        <div class="polaroid-gallery">
+          <div class="polaroid">
+            <div class="polaroid-photo">📸</div>
+            <div class="polaroid-caption">Photographie</div>
+          </div>
+          <div class="polaroid">
+            <div class="polaroid-photo">🍳</div>
+            <div class="polaroid-caption">Cuisine</div>
+          </div>
+          <div class="polaroid">
+            <div class="polaroid-photo">🏛️</div>
+            <div class="polaroid-caption">Culture</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -94,12 +180,10 @@
   </div>
 
   <script>
-    // Animation du terminal au chargement
     const lines = [
       "Vérification du matériel pédagogique...",
       "Préparation des thèmes de la semaine...",
       "Inventaire trousse de secours (PSC1)... OK",
-      "Module handicap chargé.",
       "Système d'animation prêt."
     ];
 
@@ -109,6 +193,9 @@
       if (lineIdx < lines.length) {
         const div = document.createElement("div");
         div.textContent = lines[lineIdx];
+        if (lineIdx === lines.length - 1) {
+          div.classList.add("final-line");
+        }
         terminal.appendChild(div);
         lineIdx++;
         setTimeout(typeTerminal, 600);
@@ -116,28 +203,30 @@
         setTimeout(() => {
           document.getElementById("terminal-init").classList.add("hidden");
           document.getElementById("main-content").classList.remove("hidden");
-        }, 1000);
+        }, 2000); 
       }
     }
-
-    // Lancer le terminal dès le chargement
     window.onload = typeTerminal;
 
-    // Navigation entre sections
     function showSection(id) {
       document.querySelectorAll('section').forEach(s => {
         if (s.id !== "avatar-section") s.classList.add('hidden');
       });
+      document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+      });
       document.getElementById(id).classList.remove('hidden');
+      if (event && event.currentTarget) {
+          event.currentTarget.classList.add('active');
+      }
     }
 
     function downloadCV() {
       const link = document.createElement("a");
-      link.href = "docs/CV_BAFA.pdf"; // Assure-toi que le nom du fichier correspond
+      link.href = "docs/CV_BAFA.pdf"; 
       link.download = "CV_Djeneba_Diallo_BAFA.pdf";
       link.click();
     }
   </script>
-
 </body>
 </html>
